@@ -1,11 +1,9 @@
 # -*- coding: utf-8 -*-
 
-import requests
-
 import sys
 
+import requests
 from lxml import etree
-
 
 reload(sys)
 
@@ -23,7 +21,4 @@ html = etree.HTML(r.text)
 title_list = html.xpath('//h1[@class="post-title"]/a/text()')
 
 print(title_list)
-
-
-
 
